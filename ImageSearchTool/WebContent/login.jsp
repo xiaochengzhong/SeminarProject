@@ -17,7 +17,7 @@ body {
 	background: #f6f7f1 url(img/login-bg.png) repeat 0 0;
 }
 
-.btn-reset {
+.btn-reset,.btn-submit {
 	font-family: Helvetica, Arial;
 	font-weight: normal;
 	line-height: normal;
@@ -34,20 +34,8 @@ body {
 }
 
 .btn-submit{
-	display: inline-block;
-	color: #fff;
-	background-color: #a6bbb6;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	border: none;
-	font-size: 14px;
-	cursor: pointer;
-}
-.btn-submit:hover {
-background: #aac5bf;
+background-color: #a6bbb6;
 color: #fff;
-text-decoration: none;
 }
 .form-signin {
 	max-width: 510px;
