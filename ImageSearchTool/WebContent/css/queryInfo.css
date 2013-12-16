@@ -1,0 +1,84 @@
+#originalPanel{
+	background-color: #00FFFF;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#portamento_container{
+	float: left;
+	position: relative;
+}
+
+#portamento_container #originalPanel{
+	position: relative;
+}
+
+#portamento_container #originalPanel.fixed{
+	position: fixed;
+}
+
+#matchPanel{
+	margin-left: 240px;
+	min-height: 240px;
+}
+
+#missPanel{
+	margin-left: 240px;
+	min-height: 240px;
+}
+
+.imageDiv{
+	display: inline-block;
+	padding: 5px;
+}
+
+.imgUnseleted{
+	border:solid 5px #FFFFFF;
+	width:150px; 
+	height:160px; 
+	text-align:center; 
+	vertical-align:middle; 
+	display: table-cell; 
+	background-color:#00FFFF;
+}
+
+.imgSeleted{
+	border:solid 5px #FF0000;
+	width:150px; 
+	height:160px; 
+	text-align:center; 
+	vertical-align:middle; 
+	display: table-cell; 
+	background-color:#00FFFF;
+}
+
+.noImage{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.viewBigImage{
+	text-align: center;
+}
+
+.matchInfo{
+	width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+}
+
+#correspondingNumber, #matchNumber{
+	color: #FF0000;
+    font-size: 30px;
+}
+
+.renew{
+	text-align: center;
+}
+
+#renewButton{
+	height: 50px;
+    width: 100px;
+    font: 20px bold;
+}

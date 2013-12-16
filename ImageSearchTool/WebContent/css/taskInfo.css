@@ -1,0 +1,59 @@
+#taskBody{
+	width:700px;
+	margin-left: 340px;
+	margin-top:10px;
+	background-color: black;
+	height: auto;
+}
+#taskInfoDiv,#taskIndexDiv,#taskDetailDiv{
+	position: relative;
+	width:90%;
+	float:left;
+	margin-top:10px;
+	background-color: #d9d6c3;
+}
+#taskInfoDiv,#taskIndexDiv{
+	min-height:150px;
+}
+.taskText{
+	color:blue;
+	font-weight: bold;
+}
+.taskText span{
+	color:black;
+	font-style:italic;
+	font-weight: bold;
+}
+#taskBody p{
+	font-size: large;
+	font-style: italic;
+	font-weight:bold;
+	margin-top: 2px;
+}
+#taskDetailDiv{
+	min-height:270px;
+	margin-bottom: 20px;
+}
+#queryTable{
+	position:relative;
+	width:70%;
+	margin-left: 50px;
+}
+#queryTable thead{
+	text-align: center;
+	color: blue;
+}
+#queryTable thead th{
+	border-right:1px solid #000;
+}
+.sortBtn{
+	width:23px;
+	background-image: url("../icon/up.png");
+}
+#queryTable tbody{
+	text-align: center;
+}
+.queryImg{
+	max-width:40px;
+	max-height:40px;
+}

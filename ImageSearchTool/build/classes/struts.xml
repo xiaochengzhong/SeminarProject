@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+    <constant name="struts.devMode" value="true" />
+    <!--解决乱码    -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    
+    <package name="upload" namespace="/" extends="struts-default">
+        <action name="login" class="loginAction" method="login">
+            <result name="success">/makeTask.jsp</result>
+            <result name="failure">/login.jsp</result>
+        </action>
+        <action name="logOut" class="loginAction" method="logOut">
+            <result name="success">/login.jsp</result>
+        </action>
+    </package>
+    <package name="treeNodes" namespace="/" extends="json-default">
+        <action name="zTreeNodes" class="ztreeAction" method="zTreeNodes">
+        	<result name="success" type="json"></result>
+        </action>
+        <action name="goTask" class="taskAction" method="goTask">
+        	<result name="success" type="json"></result>
+        </action>
+        <action name="fetchTaskInfo" class="taskAction" method="fetchTaskInfo">
+        	<result name="success" type="json"></result>
+        </action>
+        <action name="fetchMatchedTasks" class="matchedTaskAction" method="fetchMatchedTasks">
+        	<result name="success" type="json"></result>
+        </action>
+        <action name="fetchQueryInfo" class="matchAction" method="fetchQueryInfo">
+        	<result name="success" type="json"></result>
+        </action>
+        
+    </package>
+    
+<!--	<package name="bank" extends="struts-default">-->
+<!--		<action name="accountAction" class="atAction">-->
+<!--			<result name="success">Success.jsp</result>-->
+<!--		</action>-->
+<!--	</package>-->
+</struts>
