@@ -33,10 +33,11 @@ body {
 	text-decoration: none;
 }
 
-.btn-submit{
-background-color: #a6bbb6;
-color: #fff;
+.btn-submit {
+	background-color: #a6bbb6;
+	color: #fff;
 }
+
 .form-signin {
 	max-width: 510px;
 	padding: 19px 29px 0px;

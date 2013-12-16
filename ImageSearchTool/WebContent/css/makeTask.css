@@ -5,6 +5,14 @@
 	top:-15px;
 	background-color: gray;
 }
+body{
+	background: url(../img/bgnoise_lg.png);
+}
+.body-div{
+	background: white;
+	border: 1px solid #C9E0ED;
+	-webkit-box-shadow: 1px 1px 1px #AAA;
+}
 h2{
 	position:relative;
 	float:left;
@@ -20,123 +28,83 @@ h2{
 	float:left;
 	margin-left: 50px;
 }
-#userInfoDiv{
-	position:absolute;
-	left:0px;
-	width:100%;
-	heiht:40px;
-	border-bottom: 1px solid #000;
-	font-style: italic;
-}
-#username,#matchedTasks{
-	position:relative;
-	float: left;
-	margin-right: 50px;
-	z-index:100;
-}
+
 #username{
-	color:red;
-	left:3px;
+	float: left;
+	color: #777;
+	margin: 10px 0 0 60px;
+}
+#username a,.doA{
+	color: #777;
+	text-decoration: none;
+}
+label{
+	color: #777777;
+}
+#userInfoDiv{
+margin-top: 10px;
+padding-bottom: 20px;
+background: url(../img/project-head-border.png) repeat-x 0 100%;
+}
+#dataDiv,#choiceDiv,#taskDiv{
+	min-height: 400px;
+}
+#matchedTasks{
+	margin-left: 10px;
+}
+.div-border{
+	border-right: 1px solid #dddddd;
+	min-height: 400px;
 }
 #bodyDiv{
 	width:100%;
 	margin-top: 10px;
 }
-#dataDiv{
-	position:relative;
-	width:250px;
-	height:550px;
-	padding-top: 5px;
-	
-}
-#dataDiv p{
-	margin-bottom: 3px;
-}
-.dataSetDiv{
-	position:relative;
-	width:100%;
-	height:200px;
-	float:left;
-	overflow: auto;
-}
 #imageShowDiv{
-	position:relative;
-	width:60%;
-	height:25%;
-	float:left;
-}
-#imageShowDiv p{
-	margin-top: 1px;
-	font-size: small;
+	margin: 20px 0 0 0;
 }
 #imgShow{
 	position:relative;
 	max-width:100%;
 	max-height: 100px; 
 }
-#choiceDiv{
-	position:absolute;
-	width:300px;
-	top:60px;
-	left:300px;
-}
-#featureDiv,#similarityDiv,#parameterDiv,#buttonDiv{
-	float:left;
-	width:100%;
-	margin-top: 20px;
-	margin-left:50px;
-}
-#featureBox{
-overflow: auto;
-max-height:150px; 
-}
 #siftDiv{
 	display: none;
 }
-#buttonDiv input{
-	margin-top:80px;
-	width:80px;
-	height:30px;
+.mid-div{
+	margin-bottom: 20px;
 }
-#submit{
-	float:right;
+input[type="radio"], input[type="checkbox"]{
+	margin: 0 0 0 0;
+}
+.btn-reset,.btn-submit {
+	font-family: Helvetica, Arial;
+	font-weight: normal;
+	line-height: normal;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.btn-submit {
+	background-color: #a6bbb6;
+	color: #fff;
 }
 #cancelEdit{
 	display:none;
-	float: right;
-}
-#taskDiv{
-	position:absolute;
-	width:500px;
-	top:90px;
-	right:10px;
-	height:85%;
-	border-left:1px solid #000; 
 }
 #tableDiv{
 	position:relative;
-	margin-left:20px;
-	height:70%;
-}
-.taskTd{
-    width:500px;
-    height:30px;
-}
-.taskName,.doA{
-	float:left;
-	margin-left: 5px;
-}
-.taskName{
-	font-style: italic;
-	font-size: large;
+	margin-right:20px;
+	height:320px;
 }
 #goButton{
-	 position:absolute;
-      bottom: -5px;
-}
-#goButton input{
-	width: 70px;
-	height: 40px;
-	float: right;
-	margin-left: 300px;
+	margin-top: 10px;
 }

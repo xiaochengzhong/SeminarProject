@@ -69,8 +69,7 @@
 	 var name = treeNode.name;
 	 if(name.indexOf('.')<0)
 		 return;
-	 var imgStr = '<p>图片：'+name+'</p>'
-	              +'<img src="'+treeNode.urlAddr+'" id="imgShow"/>';
+	 var imgStr ='<img class="img-polaroid" src="'+treeNode.urlAddr+'" id="imgShow"/>';
 	 $("#imageShowDiv").html(imgStr);
  }
  
@@ -302,91 +301,114 @@ function showMatchedTasks(matchedTasks){
   </script>
 </head>
 <body>
-<div id="header">
-<h2>检索检测工具</h2>
-<ul class="linkUL">
-<li class="linkLI">
-<a href="#" target=_blank>链接1</a>
-</li>
-<li class="linkLI">
-<a href="#" target=_blank>链接2</a>
-</li>
-<li class="linkLI">
-<a href="#" target=_blank>链接3</a>
-</li>
-<li class="linkLI">
-<a href="#" target=_blank>链接4</a>
-</li>
-<li class="linkLI">
-<a href="#" target=_blank>链接5</a>
-</li>
-</ul>
-</div>
-<div id="userInfoDiv">
-<div id="username"></div>
-<div id="matchedTasks">已完成匹配任务列表：
-<select id="matchedTaskSelect" onchange="goPage()">
-<option value="">选择要查看的任务</option>
-</select>
-</div>
-</div>
-<div id="bodyDiv">
-<div id="dataDiv">
-<div>
-<p>Query:</p>
-<div class="dataSetDiv">
-<ul id="ztree1" class="ztree" style="overflow:auto;"></ul>
-</div>
-</div>
-<div>
-<p>DataSet:</p>
-<div class="dataSetDiv">
-<ul id="ztree2" class="ztree" style="overflow:auto;"></ul>
-</div>
-</div>
-<div id="imageShowDiv">
-</div>
-</div>
-<div id="choiceDiv">
-<div id="featureDiv">
-<h4>feature:</h4>
-<div id="featureBox">
-<div><a href="javaScript:siftToggle()" id="siftToggle"><img src="icon/fold.png"></a> sift</div>
-<div id="siftDiv">
-<div>&nbsp<input type="checkbox" id="fBox0" value="sift8"/>sift8</div>
-<div>&nbsp<input type="checkbox" id="fBox1" value="sift16"/>sift16</div>
-<div>&nbsp<input type="checkbox" id="fBox2" value="sift32"/>sift32</div>
-</div>
-<div><input type="checkbox" id="fBox3" value="surf"/>surf</div>
-</div>
-</div>
-<div id="similarityDiv">
-<h4>similarity:</h4>
-<div><input type="radio" id="sRadio1" name="similarity" value="euclidean" checked="checked"/>欧式距离</div>
-<div><input type="radio" id="sRadio2" name="similarity" value="cosine"/>余弦距离</div>
-<div><input type="radio" id="sRadio3" name="similarity" value="hamming"/>汉明距离</div>
-</div>
-<div id="parameterDiv">
-<h4>parameters:</h4>
-<div>top—n ：    <input type="text" id="topN"></div>
-<div>相似度 ：     <input type="text" id="matchRate"></div>
-<div>匹配距离：<input type="text" id="matchDistance"></div>
-</div>
-<div id="buttonDiv">
-<input type="button" value="清空" onclick="clearAll(true)"/>
-<input type="button" id="submit" value="提交" onclick="submitTask()"/>
-<input type="button" id="cancelEdit" value="取消编辑" onclick="cancelEdit()"/>
-</div>
-</div>
-<div id="taskDiv">
-<h3>任务列表：</h3>
-<div style="overflow:auto" id="tableDiv">
-<table id="taskTable">
-</table>
-</div>
-<div id="goButton">
-<input type="button" id="goBtn" value="开始匹配" onclick="goTasks()"/>
-</div>
+<div class="container" style="height:65px;">
+		<div class="navbar-wrapper">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="#">检索检测工具</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li class="active">
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">链接1</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">链接2</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">链接3</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">链接4</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">链接5</a>
+								</li>
+								<div id="username"></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="body-div container">
+	<div class="row-fluid" id="userInfoDiv">
+		<div class="span6" id="matchedTasks">
+			<label>已完成匹配任务列表</label> <select class="" id="matchedTaskSelect"
+				onchange="goPage()">
+				<option>选择要查看的任务</option>
+			</select>
+		</div>
+	</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 div-border" id="dataDiv">
+		<div>
+		<label>Query:</label>
+		<div class="dataSetDiv">
+		<ul id="ztree1" class="ztree" style="overflow:auto;"></ul>
+		</div>
+		</div>
+		<div>
+		<label>DataSet:</label>
+		<div class="dataSetDiv">
+		<ul id="ztree2" class="ztree" style="overflow:auto;"></ul>
+		</div>
+		</div>
+		<div id="imageShowDiv">
+		</div>
+    </div>
+    <div class="span4 div-border" id="choiceDiv">
+      <div id="featureDiv">
+      <label>feature:</label>
+			<div id="featureBox" class="mid-div">
+			<div><a href="javaScript:siftToggle()" id="siftToggle"><img src="icon/fold.png"></a> sift</div>
+			<div id="siftDiv">
+			<div>&nbsp&nbsp&nbsp&nbsp<input type="checkbox" id="fBox0" value="sift8"/>&nbsp&nbsp&nbsp&nbspsift8</div>
+			<div>&nbsp&nbsp&nbsp&nbsp<input type="checkbox" id="fBox1" value="sift16"/>&nbsp&nbsp&nbsp&nbspsift16</div>
+			<div>&nbsp&nbsp&nbsp&nbsp<input type="checkbox" id="fBox2" value="sift32"/>&nbsp&nbsp&nbsp&nbspsift32</div>
+			</div>
+			<div><input type="checkbox" id="fBox3" value="surf"/>&nbsp&nbsp&nbsp&nbspsurf</div>
+			</div>
+			</div>
+			<div id="similarityDiv" class="mid-div">
+			<label>similarity:</label>
+			<div><input type="radio" id="sRadio1" name="similarity" value="euclidean" checked="checked"/>&nbsp&nbsp&nbsp&nbsp欧式距离</div>
+			<div><input type="radio" id="sRadio2" name="similarity" value="cosine"/>&nbsp&nbsp&nbsp&nbsp余弦距离</div>
+			<div><input type="radio" id="sRadio3" name="similarity" value="hamming"/>&nbsp&nbsp&nbsp&nbsp汉明距离</div>
+			</div>
+			<div id="parameterDiv" class="mid-div">
+			<label>parameters:</label>
+			<input type="text" id="topN" name="topN" placeholder="top—n" />
+			<input type="text" id="matchRate" name="matchRate" placeholder="相似度 " />
+			<input type="text" id="matchDistance" name="matchDistance" placeholder="匹配距离 " />
+    		</div>
+			<div id="buttonDiv" class="mid-div controls">
+			<input type="button" class="btn btn-default btn-reset" value="清空" onclick="clearAll(true)"/>
+			<input type="button" class="btn btn-default btn-submit" id="submit" value="提交" onclick="submitTask()"/>
+			<input type="button" class="btn btn-default btn-reset" id="cancelEdit" value="取消编辑" onclick="cancelEdit()"/>
+			</div>
+    </div>
+    <div class="span4 div-border" id="taskDiv">
+		<label>任务列表：</label>
+		<div style="overflow:auto" id="tableDiv">
+		<table id="taskTable" class="table table-striped table-bordered table-hover">
+		</table>
+		</div>
+		<div id="goButton">
+		<input type="button" class="btn btn-default btn-submit" id="goBtn" value="开始匹配" onclick="goTasks()"/>
+		</div>
+    </div>
+  </div>
 </div>
 </div>
 </body>
