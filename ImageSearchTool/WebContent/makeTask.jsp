@@ -65,6 +65,9 @@
 	 var id =0;
 	 var pId =0;
  };
+ function doNothing(){
+	 alert("请选择要查看的任务");
+ }
  function zTreeOnClick(event, treeId, treeNode){
 	 var name = treeNode.name;
 	 if(name.indexOf('.')<0)
@@ -211,7 +214,6 @@
 			 goTasks.push(task); 
 	 }
      var tasksStr = JSON.stringify(goTasks);
-     //alert(tasksStr.toString());
 	 $.ajax({ 
          type: "post", 
          url: "goTask.action",
@@ -318,19 +320,10 @@ function showMatchedTasks(matchedTasks){
 									<a href="#">Home</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">链接1</a>
+									<a href="#" onClick="doNothing()">任务信息</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">链接2</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">链接3</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">链接4</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">链接5</a>
+									<a href="#" onClick="doNothing()">匹配结果</a>
 								</li>
 								<div id="username"></div>
 							</ul>
