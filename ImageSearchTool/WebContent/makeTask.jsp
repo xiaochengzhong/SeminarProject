@@ -317,7 +317,7 @@ function showMatchedTasks(matchedTasks){
 						<div class="nav-collapse collapse">
 							<ul class="nav">
 								<li class="active">
-									<a href="#">Home</a>
+									<a href="#">创建任务</a>
 								</li>
 								<li>
 									<a href="#" onClick="doNothing()">任务信息</a>

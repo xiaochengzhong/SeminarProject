@@ -1,36 +1,14 @@
-#originalPanel{
-	background-color: #00FFFF;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-#portamento_container{
-	float: left;
-	position: relative;
-}
-
-#portamento_container #originalPanel{
-	position: relative;
-}
-
-#portamento_container #originalPanel.fixed{
-	position: fixed;
-}
 
 #matchPanel{
-	margin-left: 240px;
-	min-height: 240px;
+	min-height: 200px;
+	border-bottom: 1px solid #dddddd;
 }
 
 #missPanel{
-	margin-left: 240px;
-	min-height: 240px;
+	min-height: 200px;
 }
 
-.imageDiv{
-	display: inline-block;
-	padding: 5px;
-}
+
 
 .imgUnseleted{
 	border:solid 5px #FFFFFF;
@@ -62,23 +40,132 @@
 }
 
 .matchInfo{
-	width: 200px;
-    padding-left: 10px;
+	color: rgb(182, 181, 181);
     padding-right: 10px;
     line-height: 30px;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
-
-#correspondingNumber, #matchNumber{
-	color: #FF0000;
-    font-size: 30px;
-}
-
 .renew{
-	text-align: center;
+	min-height: 85px;
+}
+#correspondingNumber, #matchNumber{
+	color: #000000;
+    font-size: 20px;
 }
 
-#renewButton{
-	height: 50px;
-    width: 100px;
-    font: 20px bold;
+/*copy */
+.title{
+	margin: 5px 0 0 0;
+	margin-bottom: 5px;
+}
+#header{
+	position:relative;
+	width:100%;
+	height:50px;
+	top:-15px;
+	background-color: gray;
+}
+body{
+	background: url(../img/bgnoise_lg.png);
+}
+.body-div{
+	background: white;
+	border: 1px solid #C9E0ED;
+	-webkit-box-shadow: 1px 1px 1px #AAA;
+}
+h2{
+	position:relative;
+	float:left;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.linkUL{
+	list-style-type:none;
+	margin-left:30%;
+}
+.linkLI{
+    margin-top:15px;
+	float:left;
+	margin-left: 50px;
+}
+
+#username{
+	float: left;
+	color: #777;
+	margin: 10px 0 0 200px;
+}
+#username a,.doA{
+	color: #777;
+	text-decoration: none;
+}
+label{
+	color: #777777;
+}
+#userInfoDiv{
+margin-top: 10px;
+padding-bottom: 20px;
+background: url(../img/project-head-border.png) repeat-x 0 100%;
+}
+#dataDiv,#choiceDiv,#taskDiv{
+	min-height: 400px;
+}
+#matchedTasks{
+	margin-left: 10px;
+}
+.div-border{
+	border-right: 1px solid #dddddd;
+	min-height: 400px;
+}
+#bodyDiv{
+	width:100%;
+	margin-top: 10px;
+}
+#imageShowDiv{
+	margin: 20px 0 0 0;
+}
+#imgShow{
+	position:relative;
+	max-width:100%;
+	max-height: 100px; 
+}
+#siftDiv{
+	display: none;
+}
+.mid-div{
+	margin-bottom: 20px;
+}
+input[type="radio"], input[type="checkbox"]{
+	margin: 0 0 0 0;
+}
+.btn-reset,.btn-submit {
+	font-family: Helvetica, Arial;
+	font-weight: normal;
+	line-height: normal;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.btn-submit {
+	background-color: #a6bbb6;
+	color: #fff;
+}
+#cancelEdit{
+	display:none;
+}
+#tableDiv{
+	position:relative;
+	margin-right:20px;
+	height:320px;
+}
+#goButton{
+	margin-top: 10px;
 }

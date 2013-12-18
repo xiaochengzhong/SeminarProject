@@ -204,7 +204,7 @@ $(document).ready(function(){
 						<div class="nav-collapse collapse">
 							<ul class="nav">
 								<li>
-									<a href="/ImageSearchTool/login.action">Home</a>
+									<a href="/ImageSearchTool/login.action">创建任务</a>
 								</li>
 								<li class="active">
 									<a href="#">任务信息</a>

@@ -21,6 +21,12 @@
       var corrNumber = 0;
       var corrmatchNumber = 0;
       $(document).ready(function(){
+      	$("#username").html("欢迎，"+executor+"  <a href='logOut.action'>退出</a>");
+      	var localUrl = document.location.href;
+        var argsArr = localUrl.split("&");
+        var url = argsArr[0] + "&" + argsArr[1];
+        url = url.replace("queryInfo" , "taskInfo");
+        $("#taskInfo").attr("href", url);
       $.ajax({ 
         type: "post", 
         url: "fetchQueryInfo.action",
@@ -48,7 +54,7 @@
     		  		  corrmatchNumber++;
     		  	  	  imagehtml = imagehtml + "<div class='imageDiv'>" 
     		  	  	  		+ "<div class='imgSeleted match' onclick='javascript:chooseImage(this);'"
-    		  	  	  		+ "><a><img name='img' src='" 
+    		  	  	  		+ "><a><img class='img img-polaroid' name='img' src='" 
     				  		+ images[i].path + "' onload='javascript:resizeImg(this, 150, 150);' /></a></div>" 
     				  		+ "<div class='rank'>排名" + (i+1) + "<div style='float:right'>" 
     				  		+ Math.round((images[i].matchRate)*10000)/100 + "%</div></div></div>";
@@ -56,7 +62,7 @@
     		  	  else{
     			      imagehtml = imagehtml + "<div class='imageDiv'>" 
 		  	  	  			+ "<div class='imgUnseleted match' onclick='javascript:chooseImage(this);'"
-		  	  	  			+ "><a><img name='img' src='" 
+		  	  	  			+ "><a><img class='img img-polaroid' name='img' src='" 
 				  			+ images[i].path + "' onload='javascript:resizeImg(this, 150, 150);' /></a></div>" 
 				  			+ "<div class='rank'>排名" + (i+1) + "<div style='float:right'>" 
 				  			+ Math.round((images[i].matchRate)*10000)/100 + "%</div></div></div>";
@@ -66,7 +72,7 @@
     			  corrNumber++;
     			  imagehtml2 = imagehtml2 + "<div class='imageDiv'>" 
 	  	  				+ "<div class='imgSeleted miss' onclick='javascript:chooseImage(this);'"
-	  	  				+ "><a><img name='img' src='" 
+	  	  				+ "><a><img class='img img-polaroid' name='img' src='" 
 			  			+ images[i].path + "' onload='javascript:resizeImg(this, 150, 150);' /></a></div>" 
 			  			+ "<div>"  + "<div style='float:right'>"
 			  			+ Math.round((images[i].matchRate)*10000)/100 + "%</div></div></div>";
@@ -128,37 +134,75 @@
   </head>
   
   <body>
-  	<div id="originalPanel">&nbsp;&nbsp;原图:
-  		<br/>
-  		<div class="imageDiv">
+  <div class="container" style="height:65px;">
+		<div class="navbar-wrapper">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="#">检索检测工具</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li>
+									<a href="/ImageSearchTool/login.action">创建任务</a>
+								</li>
+								<li>
+									<a href="#" id="taskInfo">任务信息</a>
+								</li>
+								<li class="active">
+									<a href="#">匹配结果</a>
+								</li>
+								<div id="username"></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  	<div class="body-div container">
+	<div class="row-fluid" id="userInfoDiv">
+		<div class="span6" id="matchedTasks">
+			<label>匹配结果</label> 
+		</div>
+	</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 div-border" id="originalPanel">
+		<label class="title">原图</label> 
+		<div class="imageDiv">
     		<a href="<%=request.getParameter("queryPath")%>" target=_blank>
-    	    	<img class="img" src="<%=request.getParameter("queryPath")%>" style='border:solid 3px #FFFFFF;' height=height*200/width width=200 />
+    	    	<img class="img img-polaroid" src="<%=request.getParameter("queryPath")%>"  height=height*200/width width=200 />
     		</a>
   		</div>
-  		<div class="viewBigImage">
-  			<a href="<%=request.getParameter("queryPath")%>" target=_blank>查看大图</a>
-  		</div>
-  		<br/>
   		<div class="matchInfo">
-  			测试图集中有<span id="correspondingNumber">5</span>张图片与原图对应，匹配结果包含了其中的<span id="matchNumber">2</span>张图片。
+  			测试图集中有&nbsp;&nbsp;
+  			<span id="correspondingNumber">5</span>
+  			&nbsp;&nbsp;张图片与原图对应，匹配结果包含了其中的&nbsp;&nbsp;
+  			<span id="matchNumber">2</span>&nbsp;&nbsp;张图片。
   		</div>
-  		<br/>
-  		<br/>
   		<div class="renew">
-  			<button id="renewButton">更新</button>
+  			<button id="renewButton" class="btn btn-default btn-submit">更新</button>
   		</div>
-  		<br/>
-  		<br/>
-  	</div>
-  	<div id="matchPanel">&nbsp;&nbsp;匹配结果:
-  		<br/>
+    </div>
+    <div class="span8 div-border" id="choiceDiv">
+		<div id="matchPanel">
+  			<label class="title">匹配结果</label>
   		<div id="imagesDiv"></div>
-  	</div>
-  	<br/>
-  	<div id="missPanel">&nbsp;&nbsp;未匹配到的对应图片:
-  		<br/>
+  		</div>
+  		<div id="missPanel">
+			<label class="title">未匹配到的对应图片</label>
   		<div id="imagesDiv2"></div>
   	</div>
+    </div>
+
+  </div>
+</div>
+</div>
   	<script src="js/portamento-min.js"></script>
   </body>
 </html>

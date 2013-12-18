@@ -166,8 +166,8 @@
 		panel.wrap('<div id="portamento_container" />');
 		var float_container = $('#portamento_container');
 		float_container.css({
-			'min-height': panel.outerHeight(),
-			'width': panel.outerWidth()
+			//'min-height': panel.outerHeight(),
+			//'width': panel.outerWidth()
 		});
 		
 		// calculate the upper scrolling boundary
