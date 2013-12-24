@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>
+nju.software.imgannotation
+    </display-name>
+  <welcome-file-list>
+    <welcome-file>
+index.html
+        </welcome-file>
+    <welcome-file>
+index.htm
+        </welcome-file>
+    <welcome-file>
+index.jsp
+        </welcome-file>
+    <welcome-file>
+default.html
+        </welcome-file>
+    <welcome-file>
+default.htm
+        </welcome-file>
+    <welcome-file>
+default.jsp
+        </welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>
+        </description>
+    <display-name>
+test
+        </display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>
+control.test
+        </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>
+/test
+        </url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
+        </description>
+    <display-name>
+taskControl
+        </display-name>
+    <servlet-name>taskControl</servlet-name>
+    <servlet-class>
+control.taskControl
+        </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>taskControl</servlet-name>
+    <url-pattern>
+/taskControl
+        </url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
+        </description>
+    <display-name>
+xmlControl
+        </display-name>
+    <servlet-name>xmlControl</servlet-name>
+    <servlet-class>
+control.xmlControl
+        </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>xmlControl</servlet-name>
+    <url-pattern>
+/xmlControl
+        </url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
+        </description>
+    <display-name>
+taskdataControl
+        </display-name>
+    <servlet-name>taskdataControl</servlet-name>
+    <servlet-class>
+control.taskdataControl
+        </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>taskdataControl</servlet-name>
+    <url-pattern>
+/taskdataControl
+        </url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>用于接受任务的发布工作</description>
+    <display-name>relTSControl</display-name>
+    <servlet-name>relTSControl</servlet-name>
+    <servlet-class>control.relTSControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>relTSControl</servlet-name>
+    <url-pattern>/relTSControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>reqNewPic</display-name>
+    <servlet-name>reqNewPic</servlet-name>
+    <servlet-class>control.reqNewPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reqNewPic</servlet-name>
+    <url-pattern>/reqNewPic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>curPicDataInfo</display-name>
+    <servlet-name>curPicDataInfo</servlet-name>
+    <servlet-class>control.curPicDataInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>curPicDataInfo</servlet-name>
+    <url-pattern>/curPicDataInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>submitTask</display-name>
+    <servlet-name>submitTask</servlet-name>
+    <servlet-class>control.submitTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>submitTask</servlet-name>
+    <url-pattern>/submitTask</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>picssetControl</display-name>
+    <servlet-name>picssetControl</servlet-name>
+    <servlet-class>control.picssetControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>picssetControl</servlet-name>
+    <url-pattern>/picssetControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>由于接受tasks的模板设置</description>
+    <display-name>tasksetControl</display-name>
+    <servlet-name>tasksetControl</servlet-name>
+    <servlet-class>control.tasksetControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tasksetControl</servlet-name>
+    <url-pattern>/tasksetControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>adminreqnextpic</display-name>
+    <servlet-name>adminreqnextpic</servlet-name>
+    <servlet-class>control.adminreqnextpic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adminreqnextpic</servlet-name>
+    <url-pattern>/adminreqnextpic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loginClServlet</display-name>
+    <servlet-name>loginClServlet</servlet-name>
+    <servlet-class>control.loginClServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginClServlet</servlet-name>
+    <url-pattern>/loginClServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>persetControl</display-name>
+    <servlet-name>persetControl</servlet-name>
+    <servlet-class>control.persetControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>persetControl</servlet-name>
+    <url-pattern>/persetControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>exitSys</display-name>
+    <servlet-name>exitSys</servlet-name>
+    <servlet-class>control.exitSys</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>exitSys</servlet-name>
+    <url-pattern>/exitSys</url-pattern>
+  </servlet-mapping>
+</web-app>

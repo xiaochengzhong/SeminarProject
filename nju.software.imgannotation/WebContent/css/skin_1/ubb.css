@@ -1,0 +1,156 @@
+#editorbody{
+	background-color: #f7f7f7;
+	border-width:1px;
+	border-style:solid;
+	border-color:#ffffff #696969 #696969 #ffffff;
+}
+#editorHead{
+	padding:1px 3px 1px 5px;
+}
+.editorTools{
+
+}
+
+.Toolsbar{
+	background: url(../bar.gif) no-repeat 2px 5px;
+	padding-left:1px;
+	height:24px;
+	margin:0px;
+	float:left;
+}
+.ToolsUL{
+	display:inline;
+	list-style:none;
+	margin:0px;
+	padding:1px;
+}
+.ToolsUL Li{
+	float:left;
+	margin:0px;
+	padding:1px;
+}
+.ToolsUL Li select{
+	font-size:12px;
+}
+
+.Toolsbutton:link,.Toolsbutton:visited{
+	border:1px solid #c6c3bd;
+	width:18px;
+	height:18px;
+	display:block;
+	padding:1px 1px 0 1px;
+	background: #efefef url(../toolbar.buttonbg.gif) repeat-x;
+	opacity: 0.70;
+	filter: alpha(opacity=70);
+}
+.Toolsbutton:hover{
+	background:#C1D2EE;
+	border:1px solid #316AC5;
+}
+.Smilie:link,.Smilie:visited{
+	border:1px solid #fff;
+	display:block;
+	padding:2px;
+	width:18px;
+	height:18px;
+}
+.Smilie:hover{
+	background:#C1D2EE;
+	border:1px solid #316AC5;
+}
+.UBBSmiliesPanel{
+	background:#fff;
+	border:1px solid #000;
+	text-align:left;
+	padding:0px;
+	position: absolute;
+	visibility:hidden;
+}
+.editorContent{
+	width:100%;
+	padding:0px 2px 3px 2px !important;
+	padding:0px 2px 3px 2px;
+	text-align:center;
+}
+.editTextarea{
+	border:1px solid #999;
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding:1px;
+	overflow:auto;
+    width:98%;
+	text-align:left;
+}
+.ToolsUL li {
+	font-size:12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/*-------------------------------------------------*/
+.UBBContainer{border:1px solid #ccc;background:#f7f7f7;border-left:3px solid;}
+.UBBTitle{font-weight:bold;padding:4px;background:#eee;border-bottom:1px dotted #ccc;}
+.UBBContent{padding:6px;line-height:160%;}
+.UBBContent textarea {width:550px;margin-bottom:2px;}
+#newaspservice {
+	color: #333333;
+	font-weight: bold;
+}
+#newaspservice a {
+	font-size: 12px;
+	color: blue;
+	text-decoration: none;
+	font-weight: bold;
+}
+#newaspservice a:hover {
+	font-size: 12px;
+	color: #ff3300;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#planmain{
+	margin : 0 auto;
+	width : 99%;
+	height:20px;
+	line-height:20px;
+}
+#planbartext{
+	float:left;width: 50px;
+	margin-top:1px;margin-left:0px;margin-right:0px;padding-top: 1px;
+	border-bottom: #2F91B3 1px solid;
+	border-left:1px solid #E1E7FF;
+	background: #6AB7D1;
+	color: #fff; text-align: center;
+	height:15px;line-height:14px;
+}
+.planbar{
+	float:left;width: 502px;
+	border: #6AB7D1 1px solid;
+	height:15px;line-height:15px;
+	text-align: left;font-size : 0px;
+	margin-top:1px;margin-left:0px;
+}
+#ProgressBar{
+	margin-top:1px;
+	margin-left:1px;
+	background:#0aca29;
+	height:12px;line-height:12px;
+	width:0px;
+	float:left;
+}
+#PercentText{
+	float:left;
+	margin-left:5px;
+}
+.plantext {
+	float:left;
+	height:20px;line-height:20px;
+	margin: 0 auto;
+	text-align:left;
+	text-indent:50px;
+}
+.plancount {
+	float:left;
+	height:20px;line-height:20px;
+	margin: 0 auto;
+	text-align:left;
+	text-indent:30px;
+}

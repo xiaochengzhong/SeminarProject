@@ -1,0 +1,50 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink"
+    height="50px"
+    viewBox="0 0 50 50"
+    width="50px"
+    xmlns="http://www.w3.org/2000/svg"
+    zoomAndPan="disable" >
+
+    <rect
+        style="fill:rgba(255,255,255,0.5);"
+        height="2"
+        width="18"
+        x="1"
+        y="2" />
+
+    <rect
+        style="fill:rgba(255,255,255,0.5);"
+        height="2"
+        width="18"
+        x="1"
+        y="7" />
+
+    <rect
+        style="fill:rgba(255,255,255,0.5);"
+        height="2"
+        width="18"
+        x="1"
+        y="12" />
+
+    <rect
+        style="fill:rgba(0,0,0,0.5);"
+        height="1"
+        width="18"
+        x="1"
+        y="1" />
+
+    <rect
+        style="fill:rgba(0,0,0,0.5);"
+        height="1"
+        width="18"
+        x="1"
+        y="6" />
+
+    <rect
+        style="fill:rgba(0,0,0,0.5);"
+        height="1"
+        width="18"
+        x="1"
+        y="11" />
+
+</svg>
