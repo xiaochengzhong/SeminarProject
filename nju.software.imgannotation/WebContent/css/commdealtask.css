@@ -71,3 +71,16 @@ font-size: larger;
 	color: rgb(182, 181, 181);
 	text-align: center;
 }
+
+img{
+	height: 600px;	
+}
+#wrapper, #content-inner {
+	min-height: 650px;
+}
+.btn-arr{
+	margin-top: 18px;
+}
+.div-list{
+	margin-bottom: 10px;
+}

@@ -119,7 +119,7 @@ body {
 }
 
 body.left-sidebar #content {
-	margin-left: 250px; /* = sidebar width + 7 */
+	/*margin-left: 250px;  = sidebar width + 7 */
 }
 
 body.right-sidebar #content {

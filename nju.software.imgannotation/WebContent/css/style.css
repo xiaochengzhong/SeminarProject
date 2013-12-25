@@ -705,36 +705,15 @@ ol.style1 li {
 /****************************/
 /*for the canvas*/
 .taskShow {
-	float: left;
-	width: 30%;
-	min-height: 250px;
-	min-width:420px;
-	background-color: #93A5C4;
-	padding-bottom: 10px;
-	position: relative;
-	margin-left: 700px;
-	margin-top: -490px;
+	margin-left: 630px;
+	margin-top: -590px;
 }
 
 /*
  * show the task list for the worker
  */
 .addthese {
-	float: left;
-	width: 400px;
-	background: url(../images/seprator.png) no-repeat right center;
-	min-height: 336px;
-	padding: 0 20px 0 0;
-	max-height: 550px;
-	float: left;
-	overflow: auto;
-	scrollbar-face-color: #CBDDF1;
-	scrollbar-highlight-color: #547CBB;
-	scrollbar-shadow-color: #547CBB;
-	scrollbar-3dlight-color: #ffffff;
-	scrollbar-arrow-color: #547CBB;
-	scrollbar-track-color: #FFFFFF;
-	scrollbar-darkshadow-color: #FFFFFF;
+	min-height: 550px;
 }
 
 .addthese ul {
@@ -744,28 +723,19 @@ ol.style1 li {
 }
 
 .addthese h3 {
-	color: #333;
-	font-size: 16px;
-	background: url(../images/sitemapheading.png) repeat-x left bottom;
-	margin: 0 0 0 0;
-	padding: 0 0 10px 0;
+font-family: "Helvetica Neue", Helvetica, Arial,"Microsoft Yahei","SimHei",Sans-serif;
+font-weight: normal;
+font-size: larger;
+line-height: 20px;
 }
 
 .addthese ul li {
 	height: 38px;
 }
 
-.addthese ul li span {
-	height: 38px;
-	line-height: 38px;
-	color: #333;
-	font-size: 14px;
-	padding: 0 0 0 35px;
-	text-decoration: none;
-}
 
 .addthese ul li span:hover {
-	color: #d3a20f;
+	color: #666666;
 }
 
 .circle {
@@ -778,6 +748,9 @@ ol.style1 li {
 
 .irregular {
 	background: url(../images/irregular.png) no-repeat left center;
+	width: 30px;
+margin-left: 10px;
+height: 17px;
 }
 
 .pencil {

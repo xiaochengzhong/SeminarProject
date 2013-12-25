@@ -30,7 +30,7 @@ String basePath = request.getScheme() + "://"
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>任务查看</title>
 <link href="css/bootstrap.min.css" type="text/css"  rel="stylesheet"/>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="css/buttons.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="javascript" src="js/bootstrap.min.js"></script>

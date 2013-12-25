@@ -909,8 +909,8 @@ function addMapkey(recordIndex)
 	id = getStringDate() +""+recordIndex+""+ m_recordData[recordIndex].length;
 	m_mapindex[recordIndex][id] = m_recordData[recordIndex].length-1;    //create the key-value
 	//add the index of the actions
-	data = "<div style=\"width:80%;margin-left: 50px;\" id=\"div_"+id+"\"><input type=\"button\" id=\""+id+"\" value=\"删除\" style=\"position:relative;padding-left: 2px;padding-right: 2px;\" onclick=\"deleteAction(this.id)\" class=\"button\">";
-	data += "<input type=\"radio\" id=\""+id+"\" name=\"childCheck\" class=\"childAction\" onclick=\"outline(this.id)\">画图动作</div>";
+	data = "<div style=\"width:80%;margin-left: 50px; margin-bottom: 10px;\" id=\"div_"+id+"\"><input class=\"button glow button-rounded button-flat\" type=\"button\" id=\""+id+"\" value=\"删除\" style=\"position:relative;padding-left: 10px;padding-right: 10px;\" onclick=\"deleteAction(this.id)\" class=\"button\">";
+	data += "<input type=\"radio\" id=\""+id+"\" style=\"margin-top: 0px;margin-right: 20px; margin-left: 10px;\" name=\"childCheck\" class=\"childAction\" onclick=\"outline(this.id)\"><span>画图动作</span></div>";
 	$("#act_"+recordIndex).html($("#act_"+recordIndex).html()+data);
     //adjust the key-value
 //    for(var key in m_mapindex[recordIndex]){  
